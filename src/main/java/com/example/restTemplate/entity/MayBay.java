@@ -10,18 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "maybay")
+
 public class MayBay {
-	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MaMB")
+
 	private int maMB;
 	
-	@Column(name = "Loai")
+
 	private String loai;
 	
-	@Column(name = "TamBay")
+
 	private int tamBay;
 	
 	

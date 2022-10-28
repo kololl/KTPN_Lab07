@@ -16,42 +16,42 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.restTemplate.entity.ChuyenBay;
-import com.example.restTemplate.service.ChuyenBayService;
+
 
 
 @RestController
 @RequestMapping("/chuyenbay")
 public class ChuyenBayController {
-	private ChuyenBayService chuyenBayDao;
 
-	@Autowired
-	public ChuyenBayController( ChuyenBayService employeeDao) {
-		super();
-		this.chuyenBayDao = employeeDao;
-	}
 
-	
-	@RequestMapping(value = "/gaDen/{gaDen:.+}", method = RequestMethod.GET)
-	public List<ChuyenBay> findById(@PathVariable(name = "gaDen", value = "gaDen") String gaDen) {
-		System.out.println(gaDen);
-		return chuyenBayDao.getChuyenBayByDiemDen(gaDen);
-		
-	}
-	@GetMapping("/doDai")
-	public List<ChuyenBay> getChuyenBayByDoDai (@RequestParam int startDoDai,
-																@RequestParam int endDoDai) {
-		System.out.println(startDoDai);
-		System.out.println(endDoDai);
-		return chuyenBayDao.findByDoDaiBetween(startDoDai, endDoDai);
-	}
-	
-	@GetMapping("/cb")
-	public List<ChuyenBay> getChuyenBayGaDiAndGaDen (@RequestParam String gaDi,
-																@RequestParam String gaDen) {
-		System.out.println(gaDi);
-		System.out.println(gaDen);
-		return chuyenBayDao.findByGaDiAndGaDen(gaDi, gaDen);
-	}
+//	@Autowired
+//	public ChuyenBayController( ChuyenBayService employeeDao) {
+//		super();
+//		this.chuyenBayDao = employeeDao;
+//	}
+//
+//	
+//	@RequestMapping(value = "/gaDen/{gaDen:.+}", method = RequestMethod.GET)
+//	public List<ChuyenBay> findById(@PathVariable(name = "gaDen", value = "gaDen") String gaDen) {
+//		System.out.println(gaDen);
+//		return chuyenBayDao.getChuyenBayByDiemDen(gaDen);
+//		
+//	}
+//	@GetMapping("/doDai")
+//	public List<ChuyenBay> getChuyenBayByDoDai (@RequestParam int startDoDai,
+//																@RequestParam int endDoDai) {
+//		System.out.println(startDoDai);
+//		System.out.println(endDoDai);
+//		return chuyenBayDao.findByDoDaiBetween(startDoDai, endDoDai);
+//	}
+//	
+//	@GetMapping("/cb")
+//	public List<ChuyenBay> getChuyenBayGaDiAndGaDen (@RequestParam String gaDi,
+//																@RequestParam String gaDen) {
+//		System.out.println(gaDi);
+//		System.out.println(gaDen);
+//		return chuyenBayDao.findByGaDiAndGaDen(gaDi, gaDen);
+//	}
 	
 	
 

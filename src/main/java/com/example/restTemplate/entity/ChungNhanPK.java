@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
-@Embeddable
+
 public class ChungNhanPK implements Serializable {
     private String maNV;
     private int maMB;

@@ -8,29 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
-@Table(name = "chuyenbay")
+
 public class ChuyenBay {
-	@Id
-	@Column(name = "MaCB")
+
 	private String maCB;
 	
-	@Column(name = "GaDi")
+
 	private String gaDi;
 	
-	@Column(name = "GaDen")
+
 	private String gaDen;
 	
-	@Column(name = "DoDai")
+
 	private int doDai;
-	
-	@Column(name = "ChiPhi")
+
 	private int chiPhi;
 	
-	@Column(name = "GioDen")
+
 	private Date gioDen;
 	
-	@Column(name = "GioDi")
+
 	private Date gioDi;
 	public ChuyenBay(String maCB, String gaDi, String gaDen, int doDai, int chiPhi, Date gioDen, Date gioDi) {
 		super();

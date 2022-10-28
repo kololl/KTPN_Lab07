@@ -10,16 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "nhanvien")
+
 public class NhanVien {
-	@Id
-	
-	@Column(name = "MaNV")
+
 	private String maNV;
-	@Column(name = "Ten")
+
 	private String ten;
-	@Column(name = "Luong")
+
 	private int luong;
 
 	

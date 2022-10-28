@@ -3,18 +3,11 @@ package com.example.restTemplate.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@IdClass(ChungNhanPK.class)
-@Table(name = "chungnhan")
 public class ChungNhan implements Serializable {
-    @Id
-    @JoinColumn(name = "MaNV")
-    @ManyToOne(fetch = FetchType.EAGER)
+
     private NhanVien maNV;
 
-    @Id
-    @JoinColumn(name = "MaMB", columnDefinition = "int")
-    @ManyToOne(fetch = FetchType.LAZY)
+
     private MayBay maMB;
 
     public ChungNhan() {
